@@ -3,29 +3,40 @@
 //class Fruit implements Eatable	{ public String toString() {return "Fruit";}}
 //class Apple extends	Fruit		{ public String toString() {return "Apple";}}
 //class Grape extends	Fruit		{ public String toString() {return "Grape";}}
-//class Toy						{ public String toString() {return "Toy";}}
 //
 //interface Eatable { }
 //
-//public class FruitBoxEx2 {
+//class Juice{
+//	String name;
+//	
+//	public Juice(String name) {	this.name = name + "Juice";}
+//	public String toString(){ return name;}
+//}
+//
+//class Juicer{
+//	static Juice makeJuice(FruitBox<? extends Fruit> box) {
+//		String tmp = "";
+//		
+//		for(Fruit f : box.list)
+//			tmp += f + " ";
+//		return new Juice(tmp);
+//	}
+//}
+//
+//
+//public class FruitBoxEx3 {
 //
 //	public static void main(String[] args) {
 //		FruitBox<Fruit> fruitBox = new FruitBox<Fruit>();
 //		FruitBox<Apple> appleBox = new FruitBox<Apple>();
-//		FruitBox<Grape> grapeBox = new FruitBox<Grape>();
-////		FruitBox<Grape>> fruitBox = new FruitBox<Apple>();
-////		FruitBox<Toy> fruitBox = new FruitBox<Fruit>();
-//		
-//		fruitBox.add(new Fruit());
+//
 //		fruitBox.add(new Apple());
 //		fruitBox.add(new Grape());
 //		appleBox.add(new Apple());
-////		appleBox.add(new Grape());
-//		grapeBox.add(new Grape());
+//		appleBox.add(new Apple());
 //		
-//		System.out.println("fruitBox-"+fruitBox);
-//		System.out.println("appleBox-"+appleBox);
-//		System.out.println("grapeBox-"+grapeBox);
+//		System.out.println(Juicer.makeJuice(fruitBox));
+//		System.out.println(Juicer.makeJuice(appleBox));
 //	}
 //
 //}
