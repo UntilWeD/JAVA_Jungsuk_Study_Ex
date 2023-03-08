@@ -27,6 +27,7 @@ public class Exercise11_13 {
 			}
 		});
 		
+		
 		for(int i=0; i < pArr.length;i++) {
 			Player p = pArr[i];
 			rank.put(p, deck.getPoint(p));

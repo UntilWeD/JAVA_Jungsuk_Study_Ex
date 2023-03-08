@@ -68,7 +68,7 @@ public class Exercise11_14 {
 			String str = s.next();
 			
 			try {
-				if(!(str.equalsIgnoreCase("q")) {
+				if(!(str.equalsIgnoreCase("q"))) {
 					break;
 				} else {
 					record.add(new Student(str, s.nextInt(), s.nextInt(), s.nextInt(), s.nextInt(), s.nextInt()));

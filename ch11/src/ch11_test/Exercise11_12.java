@@ -15,7 +15,7 @@
 //		System.out.println(p2+" "+deck.getPoint(p2));
 //	}
 //}
-//
+
 //
 //
 //class SutdaDeck
