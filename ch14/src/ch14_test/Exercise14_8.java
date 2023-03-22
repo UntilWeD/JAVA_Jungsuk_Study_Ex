@@ -3,6 +3,7 @@ package ch14_test;
 import java.util.*;
 import java.util.function.*;
 import java.util.stream.*;
+
 import static java.util.stream.Collectors.*;
 import static java.util.Comparator.*;
 
@@ -65,10 +66,14 @@ public class Exercise14_8 {
 		
 		Map<Boolean, Map<Boolean, Long>> failedStuBySex = 
 				Stream.of(stuArr)
-				.collect(
-					groupingBy(Student::isMale, 
-							)
-				));
+				.collect(groupingBy(Student::isMale,
+						groupingBy(s -> {
+							if(s.getScore() < 150) return true;
+							else return false;
+							}, counting())
+						));
+				
+
 	
 		
 		long failedMaleStuNum = failedStuBySex.get(true).get(true);
